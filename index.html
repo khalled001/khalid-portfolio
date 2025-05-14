@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khalid Almutairi - Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; text-align: center; }
+        img { width: 200px; border-radius: 100px; margin-top: 20px; }
+        h1 { color: #004aad; margin-bottom: 5px; }
+        .cert { margin: 10px 0; }
+        .counter { font-size: 18px; margin-top: 20px; color: #333; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+        a { text-decoration: none; color: #0056b3; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Khalid Awadh Almutairi</h1>
+    <img src="profile.jpg" alt="Profile Photo">
+    <p>Welcome to my personal portfolio website.</p>
+
+    <div class="counter">
+        👁️ Total Visitors: <span id="visits">Loading...</span>
+    </div>
+
+    <h2>My Certifications</h2>
+    <ul>
+        <li><a href="certificate_istqb.pdf" target="_blank">ISTQB Certified Tester</a></li>
+        <li><a href="certificate_cloud.pdf" target="_blank">Cloud Foundations</a></li>
+        <li><a href="certificate_threat.pdf" target="_blank">Cyber Threat Management</a></li>
+        <li><a href="certificate_intro_cyber.pdf" target="_blank">Introduction to Cybersecurity</a></li>
+        <li><a href="certificate_iot.pdf" target="_blank">Introduction to IoT</a></li>
+        <li><a href="certificate_misc.pdf" target="_blank">Other Certificate</a></li>
+        <li><a href="certificate_registration.pdf" target="_blank">Academic Registration</a></li>
+        <li><a href="certificate_training.pdf" target="_blank">Training Certificate</a></li>
+        <li><a href="certificate_pmp_master.pdf" target="_blank">Project Management Master</a></li>
+        <li><a href="certificate_network_troubleshooting.pdf" target="_blank">Network Troubleshooting</a></li>
+        <li><a href="certificate_network_security.pdf" target="_blank">Network Security</a></li>
+        <li><a href="certificate_scrum_master.pdf" target="_blank">Scrum Master Certificate</a></li>
+        <li><a href="certificate_engineer_membership.pdf" target="_blank">Engineer Membership</a></li>
+        <li><a href="certificate_python_essentials.pdf" target="_blank">Python Essentials</a></li>
+    </ul>
+
+    <script>
+        fetch('https://api.countapi.xyz/hit/khalid-portfolio.netlify.app/visits')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('visits').innerText = data.value;
+            });
+    </script>
+</body>
+</html>
